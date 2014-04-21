@@ -1,0 +1,38 @@
+html, body{
+	height:100%;
+	font-size:17px;
+}
+#container {height:100%;}
+.topNav {
+	position:relative;
+	width:96%;
+	padding:2% 2%;
+}
+.searchBox {
+	display:inline-block;
+	width:82%;
+	height:36px;
+	padding:1%;
+	border:none;
+	border-radius:0.5em 0 0 0.5em;
+	color:gray;
+}
+.searchBtn {
+	position:absolute;
+	right:2%;
+	width:14%;
+	height:36px;
+	padding:1%;
+	border-left:1px solid rgba(0,0,0,0.1);
+	border-radius:0 0.5em 0.5em 0;
+	text-align:center;
+	line-height:36px;
+	background:#000;
+	color:#fff;
+}
+.searchBtn:active {
+	background:rgba(0,0,0,0.7);
+}
+.searchBtn:link, .searchBtn:hover, .searchBtn:visited {
+	text-decoration:none;
+};

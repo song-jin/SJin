@@ -1,0 +1,454 @@
+html,
+body {
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*--border-radius函数--*/
+/*--让某些块元素下添加分割线，用于与其他元素产生隔离*/
+/*--次要元素显示方式*/
+/*--链接显示方式*/
+/*--------------------layout--------------------*/
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  padding: 5% 5% 0 5%;
+  background: #f6f6f6;
+}
+#wrapper {
+  float: right;
+  width: 60%;
+  padding: 5% 5% 0 0;
+  background: #fff;
+}
+/*--------------------header--------------------*/
+header .intro {
+  padding-bottom: 12%;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 12%;
+}
+header .intro a img {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+}
+header .intro p {
+  color: #bababa;
+}
+header .intro p span {
+  font-weight: bold;
+  color: black;
+}
+header .nav {
+  padding-bottom: 12%;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 12%;
+}
+header .nav a:link,
+header .nav a:visited {
+  padding-bottom: 0;
+  border-bottom: 0;
+  text-decoration: none;
+  color: #3a8d9a;
+}
+header .nav a:hover,
+header .nav a:focus {
+  -moz-animation: change-nav-color 0.5s;
+  -webkit-animation: change-nav-color 0.5s;
+  -o-animation: change-nav-color 0.5s;
+  animation: change-nav-color 0.5s;
+  color: #000000;
+}
+header .contact li,
+header .contact a {
+  display: inline-block;
+}
+header .contact li {
+  margin-right: 20px;
+}
+header .contact li a:link,
+header .contact li a:visited {
+  width: 32px;
+  height: 32px;
+  padding: 6.5px;
+  background: url(img/contact-bg.png) top left;
+}
+header .contact li a:hover,
+header .contact li a:focus {
+  background: url(img/contact-bg.png) top right;
+}
+/*--------------------footer page------------------*/
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 36px;
+  height: 64px;
+  background: url(img/top.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+#scroll-to-top:hover {
+  background-position: top right;
+}
+/*--------------------home page--------------------*/
+.home .post {
+  padding-bottom: 5%;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 5%;
+}
+.home .post h1 a {
+  padding-bottom: 2px;
+  border-bottom: 0;
+  text-decoration: none;
+  color: #000000;
+}
+.home .post .meta {
+  padding: 10px 0;
+  font-size: 12px;
+  color: #bababa;
+}
+.home .post .meta a:link,
+.home .post .meta a:visited {
+  font-size: 12px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3a8d9a;
+  text-decoration: none;
+  color: #bababa;
+}
+.home .post .meta a:hover,
+.home .post .meta a:focus {
+  -moz-animation: change-meta-color 0.5s;
+  -webkit-animation: change-meta-color 0.5s;
+  -o-animation: change-meta-color 0.5s;
+  animation: change-meta-color 0.5s;
+  color: #3a8d9a;
+}
+.home .post .more {
+  padding-top: 10px;
+}
+.home .post .more-link:link,
+.home .post .more-link:visited {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3a8d9a;
+  text-decoration: none;
+  color: #000000;
+}
+.home .post .more-link:hover,
+.home .post .more-link:focus {
+  -moz-animation: change-color 0.5s;
+  -webkit-animation: change-color 0.5s;
+  -o-animation: change-color 0.5s;
+  animation: change-color 0.5s;
+  color: #3a8d9a;
+}
+/*--------------------Archives page--------------------*/
+.archives .year-list {
+  padding-bottom: 10%;
+}
+.archives .year-list h1 {
+  border-bottom: 1px solid gray;
+}
+.archives .year-list .list {
+  padding: 0 5%;
+  line-height: 3;
+}
+.archives .year-list .list li {
+  border-bottom: 1px dashed #e6e7e9;
+  overflow: hidden;
+}
+.archives .year-list .list-name {
+  float: left;
+}
+.archives .year-list .list-name a:link,
+.archives .year-list .list-name a:visited {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3a8d9a;
+  text-decoration: none;
+  color: #000000;
+}
+.archives .year-list .list-name a:hover,
+.archives .year-list .list-name a:focus {
+  -moz-animation: change-color 0.5s;
+  -webkit-animation: change-color 0.5s;
+  -o-animation: change-color 0.5s;
+  animation: change-color 0.5s;
+  color: #3a8d9a;
+}
+.archives .year-list .list-meta {
+  float: right;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #bababa;
+}
+.archives .year-list .list-meta a:link,
+.archives .year-list .list-meta a:visited {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3a8d9a;
+  text-decoration: none;
+  color: #bababa;
+}
+.archives .year-list .list-meta a:hover,
+.archives .year-list .list-meta a:focus {
+  -moz-animation: change-meta-color 0.5s;
+  -webkit-animation: change-meta-color 0.5s;
+  -o-animation: change-meta-color 0.5s;
+  animation: change-meta-color 0.5s;
+  color: #3a8d9a;
+}
+/*--------------------links page--------------------*/
+.links h1 {
+  border-bottom: 1px solid gray;
+}
+.links ul {
+  list-style-type: disc;
+  padding: 2% 5% 0 5%;
+}
+.links li {
+  padding-bottom: 15px;
+}
+.links li a:link,
+.links li a:visited {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3a8d9a;
+  text-decoration: none;
+  color: #000000;
+}
+.links li a:hover,
+.links li a:focus {
+  -moz-animation: change-color 0.5s;
+  -webkit-animation: change-color 0.5s;
+  -o-animation: change-color 0.5s;
+  animation: change-color 0.5s;
+  color: #3a8d9a;
+}
+.links li p {
+  font-size: 12px;
+  color: #bababa;
+}
+/*--------------------single page--------------------*/
+.single {
+  /*写文章时出现样式偏差在这里修改*/
+}
+.single .post-meta {
+  padding: 10px 0;
+  font-size: 12px;
+  color: #bababa;
+}
+.single .post-meta a:link,
+.single .post-meta a:visited {
+  font-size: 12px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3a8d9a;
+  text-decoration: none;
+  color: #bababa;
+}
+.single .post-meta a:hover,
+.single .post-meta a:focus {
+  -moz-animation: change-meta-color 0.5s;
+  -webkit-animation: change-meta-color 0.5s;
+  -o-animation: change-meta-color 0.5s;
+  animation: change-meta-color 0.5s;
+  color: #3a8d9a;
+}
+.single .post {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #bababa;
+  margin-bottom: 30px;
+}
+.single .post ul {
+  list-style-type: disc;
+}
+.single .post ol {
+  list-style-type: decimal;
+}
+/*--------------------自适应--------------------*/
+@media screen and (max-width: 900px) {
+  .archives .year-list .list-meta {
+    float: left;
+    clear: both;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    position: static;
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    text-align: center;
+  }
+  header .intro,
+  header .nav,
+  header .contact {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    padding-bottom: 5%;
+  }
+  header .intro p {
+    width: 70%;
+    margin: auto;
+  }
+  header .nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  header .contact li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #wrapper {
+    float: none;
+    width: 90%;
+    padding: 5%;
+  }
+}
+@media screen and (max-device-width: 900px) {
+  .archives .year-list .list-meta {
+    float: left;
+    clear: both;
+    margin-top: 0;
+  }
+}
+@media screen and (max-device-width: 700px) {
+  header {
+    position: static;
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    text-align: center;
+  }
+  header .intro,
+  header .nav,
+  header .contact {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    padding-bottom: 5%;
+  }
+  header .intro p {
+    width: 70%;
+    margin: auto;
+  }
+  header .nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  header .contact li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #wrapper {
+    float: none;
+    width: 90%;
+    padding: 5%;
+  }
+}
+/*--------------------animation--------------------*/
+/*animation --- change color for link*/
+@keyframes change-color {
+  from {
+    color: #000;
+  }
+  to {
+    color: #3a8d9a;
+  }
+}
+@-moz-keyframes change-color {
+  from {
+    color: #000;
+  }
+  to {
+    color: #3a8d9a;
+  }
+}
+@-webkit-keyframes change-color {
+  from {
+    color: #000;
+  }
+  to {
+    color: #3a8d9a;
+  }
+}
+@-o-keyframes change-color {
+  from {
+    color: #000;
+  }
+  to {
+    color: #3a8d9a;
+  }
+}
+/*animation --- change color for meta link*/
+@keyframes change-meta-color {
+  from {
+    color: #bababa;
+  }
+  to {
+    color: #3a8d9a;
+  }
+}
+@-moz-keyframes change-meta-color {
+  from {
+    color: #bababa;
+  }
+  to {
+    color: #3a8d9a;
+  }
+}
+@-webkit-keyframes change-meta-color {
+  from {
+    color: #bababa;
+  }
+  to {
+    color: #3a8d9a;
+  }
+}
+@-o-keyframes change-meta-color {
+  from {
+    color: #bababa;
+  }
+  to {
+    color: #3a8d9a;
+  }
+}
+/*animation --- change color for nav link*/
+@keyframes change-nav-color {
+  from {
+    color: #3a8d9a;
+  }
+  to {
+    color: #000;
+  }
+}
+@-moz-keyframes change-nav-color {
+  from {
+    color: #3a8d9a;
+  }
+  to {
+    color: #000;
+  }
+}
+@-webkit-keyframes change-nav-color {
+  from {
+    color: #3a8d9a;
+  }
+  to {
+    color: #000;
+  }
+}
+@-o-keyframes change-nav-color {
+  from {
+    color: #3a8d9a;
+  }
+  to {
+    color: #000;
+  }
+}

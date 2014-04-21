@@ -1,0 +1,398 @@
+@full-height:100%;
+html, body {
+	width:100%;
+}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+/*--border-radius函数--*/
+.rounded-corners (@radius:15px) {
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	-o-border-radius:@radius;
+	border-radius:@radius;
+}
+
+
+/*--让某些块元素下添加分割线，用于与其他元素产生隔离*/
+.btm-line (@btm-distance:12%) {
+	padding-bottom:@btm-distance;
+	border-bottom:1px solid #eaeaea;
+	margin-bottom:@btm-distance;
+}
+
+/*--次要元素显示方式*/
+.minor () {
+	color:#bababa;
+}
+
+/*--链接显示方式*/
+.link-style (@color:black, @padding-bottom:2px, @border-bottom:1px solid #3a8d9a) {
+	padding-bottom:@padding-bottom;
+	border-bottom:@border-bottom;
+	text-decoration:none;
+	color:@color;
+}
+.link-animation (@name:change-color, @color:#3a8d9a, @second:0.5s) {
+	-moz-animation:@name @second;
+	-webkit-animation:@name @second;
+	-o-animation:@name @second;
+	animation:@name @second;
+	color:@color;
+}
+
+
+/*--------------------layout--------------------*/
+header {
+	position:fixed;
+	left:0;
+	top:0;
+	width:20%;
+	height:@full-height;
+	padding:5% 5% 0 5%;
+	background:#f6f6f6;
+}
+#wrapper {
+	float:right;
+	width:60%;
+	padding:5% 5% 0 0;
+	background:#fff;
+}
+/*--------------------header--------------------*/
+header {
+	.intro {
+		.btm-line;
+		a {
+			img {.rounded-corners;}
+		}
+		p {
+			.minor;
+			span {font-weight:bold;color:black;}
+		}
+	}
+	.nav {
+		.btm-line;
+		a:link, a:visited {
+			.link-style(#3a8d9a, 0, 0);
+		}
+		a:hover, a:focus {
+			.link-animation(change-nav-color, black, 0.5s);
+		}
+	}
+	.contact {
+		li, a {
+			display:inline-block;
+		}
+		li {
+			margin-right:20px;
+			a:link, a:visited {
+				width:32px;
+				height:32px;
+				padding:6.5px;
+				background:url(img/contact-bg.png) top left;
+			}
+			a:hover, a:focus {
+				background:url(img/contact-bg.png) top right;
+			}
+		}
+	}
+}
+
+/*--------------------footer page------------------*/
+#scroll-to-top {
+	display:none;
+	position:fixed;
+	right:10px;
+	bottom:10px;
+	width:36px;
+	height:64px;
+	background:url(img/top.png) no-repeat;
+	background-position:0 0;
+	cursor:pointer;
+}
+#scroll-to-top:hover {
+	background-position:top right;
+}
+
+
+/*--------------------home page--------------------*/
+.home .post {
+	.btm-line(5%);
+	h1 a {
+		.link-style (black, @padding-bottom:2px, 0)
+	}
+	@font-size:12px;
+	.meta {
+		padding:10px 0;
+		font-size:@font-size;
+		.minor;
+		a:link, a:visited {
+			font-size:@font-size;
+			.link-style (#bababa, @padding-bottom:2px, 1px solid #3a8d9a);
+		}
+		a:hover, a:focus {
+			.link-animation (change-meta-color, #3a8d9a, 0.5s)
+		}
+	}
+	.more {
+		padding-top:10px;
+	}
+	.more-link:link, .more-link:visited {
+		.link-style;
+	}
+	.more-link:hover, .more-link:focus {
+		.link-animation;
+	}
+}
+
+/*--------------------Archives page--------------------*/
+.archives .year-list {
+	padding-bottom:10%;
+	h1 {
+		border-bottom:1px solid gray;
+	}
+	.list {
+		padding:0 5%;
+		line-height:3;
+		li {
+			border-bottom:1px dashed #e6e7e9;
+			overflow:hidden;
+		}
+	}
+	.list-name {
+		float:left;
+		a:link, a:visited {
+			.link-style;
+		}
+		a:hover, a:focus {
+			.link-animation;
+		}
+	}
+	.list-meta {
+		float:right;
+		margin-top:5px;
+		font-size:12px;
+		.minor;
+		a:link, a:visited {
+			.link-style(#bababa);
+		}
+		a:hover, a:focus {
+			.link-animation(change-meta-color);
+		}
+	}
+}
+
+
+/*--------------------links page--------------------*/
+.links {
+	h1 {
+		border-bottom:1px solid gray;
+	}
+	ul {
+		list-style-type:disc;
+		padding:2% 5% 0 5%;
+	}
+	li {
+		padding-bottom:15px;
+		a:link, a:visited {
+			.link-style;
+		}
+		a:hover, a:focus {
+			.link-animation;
+		}
+		p {
+			font-size:12px;
+			.minor;
+		}
+	}
+}
+
+
+/*--------------------single page--------------------*/
+.single {
+	@font-size:12px;
+	.post-meta {
+		padding:10px 0;
+		font-size:@font-size;
+		.minor;
+		a:link, a:visited {
+			font-size:@font-size;
+			.link-style (#bababa, @padding-bottom:2px, 1px solid #3a8d9a);
+		}
+		a:hover, a:focus {
+			.link-animation (change-meta-color, #3a8d9a, 0.5s)
+		}
+	}
+	/*写文章时出现样式偏差在这里修改*/
+	.post {
+		padding-bottom:30px;
+		border-bottom:1px solid #bababa;
+		margin-bottom:30px;
+		ul {
+			list-style-type:disc;
+		}
+		ol {
+			list-style-type:decimal;
+		}
+	}
+}
+
+
+/*--------------------自适应--------------------*/
+@media screen and (max-width:900px) {
+	.archives {
+		.year-list {
+			.list-meta {
+				float:left;
+				clear:both;
+				margin-top:0;
+			}
+		}
+	}
+}
+@media screen and (max-width:700px) {
+	header {
+		position:static;
+		width:90%;
+		height:auto;
+		padding:5%;
+		text-align:center;
+		.intro, .nav, .contact {
+			padding:0;
+			border:0;
+			margin:0;
+			padding-bottom:5%;
+		}
+		.intro {
+			p {
+				width:70%;
+				margin:auto;
+			}
+		}
+		.nav {
+			li {
+				display:inline-block;
+				margin:0 10px;
+			}
+		}
+		.contact {
+			li{
+				margin-left:10px;
+				margin-right:10px;
+			}
+		}
+	}
+	#wrapper {
+		float:none;
+		width:90%;
+		padding:5%;
+	}
+}
+@media screen and (max-device-width:900px) {
+	.archives {
+		.year-list {
+			.list-meta {
+				float:left;
+				clear:both;
+				margin-top:0;
+			}
+		}
+	}
+}
+@media screen and (max-device-width:700px) {
+	header {
+		position:static;
+		width:90%;
+		height:auto;
+		padding:5%;
+		text-align:center;
+		.intro, .nav, .contact {
+			padding:0;
+			border:0;
+			margin:0;
+			padding-bottom:5%;
+		}
+		.intro {
+			p {
+				width:70%;
+				margin:auto;
+			}
+		}
+		.nav {
+			li {
+				display:inline-block;
+				margin:0 10px;
+			}
+		}
+		.contact {
+			li{
+				margin-left:10px;
+				margin-right:10px;
+			}
+		}
+	}
+	#wrapper {
+		float:none;
+		width:90%;
+		padding:5%;
+	}	
+}
+
+/*--------------------animation--------------------*/
+
+/*animation --- change color for link*/
+@keyframes change-color {
+	from {color:#000;}
+	to {color:#3a8d9a;}
+}
+@-moz-keyframes change-color {
+	from {color:#000;}
+	to {color:#3a8d9a;}
+}
+@-webkit-keyframes change-color {
+	from {color:#000;}
+	to {color:#3a8d9a;}
+}
+@-o-keyframes change-color {
+	from {color:#000;}
+	to {color:#3a8d9a;}
+}
+
+/*animation --- change color for meta link*/
+@keyframes change-meta-color {
+	from {color:#bababa;}
+	to {color:#3a8d9a;}
+}
+@-moz-keyframes change-meta-color {
+	from {color:#bababa;}
+	to {color:#3a8d9a;}
+}
+@-webkit-keyframes change-meta-color {
+	from {color:#bababa;}
+	to {color:#3a8d9a;}
+}
+@-o-keyframes change-meta-color {
+	from {color:#bababa;}
+	to {color:#3a8d9a;}
+}
+
+/*animation --- change color for nav link*/
+@keyframes change-nav-color {
+	from {color:#3a8d9a;}
+	to {color:#000;}
+}
+@-moz-keyframes change-nav-color {
+	from {color:#3a8d9a;}
+	to {color:#000;}
+}
+@-webkit-keyframes change-nav-color {
+	from {color:#3a8d9a;}
+	to {color:#000;}
+}
+@-o-keyframes change-nav-color {
+	from {color:#3a8d9a;}
+	to {color:#000;}
+}

@@ -1,0 +1,9 @@
+body {
+	font-family:'微软雅黑', serif;
+}
+body #main .post {
+	font-family:'Helvetica Neue', Helvetica, Arial;
+}
+#singleMain .post {
+	font-size:14px;
+}
